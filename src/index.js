@@ -11,7 +11,8 @@ const theme = {
     white: 'white',
     accent: 'tomato',
     lightGrey: '#8e9ba9',
-    border: '#e8ecf2'
+    border: '#e8ecf2',
+
   }
 }
 ReactDOM.createRoot(document.getElementById('root')).render(

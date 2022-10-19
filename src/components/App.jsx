@@ -18,7 +18,8 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101'
+        color: '#010101',
+        flexDirection: 'column'
       }}
     >
         <Profile
@@ -28,11 +29,12 @@ export const App = () => {
   avatar={user.avatar}
   stats={user.stats}
       />
-
-      {/* <Statistic title="Upload stats" stats={data} />
-      <Statistic stats={data} />
-      
+        <Statistic title="Upload stats" stats={data}  />
+      <Statistic stats={data}  />
       <FriendList friends={friends} />
+      {/*  
+      
+      
     <TransactionHistory items={transactions} />*/}
     </div>
     

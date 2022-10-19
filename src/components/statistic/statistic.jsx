@@ -1,19 +1,21 @@
+import { Label, Percentage, Stat, Statistics, StatItem, Title } from "./statistic-style"
+import { getRandomColor } from './RandomColor.js'
 export const Statistic = ({ title, stats }) => {
-    return <section class="statistics">
+    return <Statistics>
       {title && (
-         <h2 class="title">Upload stats</h2>
+         <Title>Upload stats</Title>
        ) }
 
-      <ul class="stat-list">
+      <Stat>
         {stats.map(each => (
           
-          <li key={each.id}class="item">
-          <span class="label">{each.label}</span>
-          <span class="percentage">{each.percentage}</span>
-          </li>
+          <StatItem key={each.id}   style={{backgroundColor:getRandomColor()}}>
+          <Label >{each.label}</Label>
+          <Percentage >{each.percentage}%</Percentage>
+          </StatItem>
         ))}
     
     
-  </ul>
-</section>
+  </Stat>
+</Statistics>
 }
