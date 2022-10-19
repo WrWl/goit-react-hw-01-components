@@ -1,10 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { ThemeProvider } from 'styled-components'
 import { App } from 'components/App';
 import './index.css';
-console.log("hello")
+
+
+const theme = {
+  colors: {
+    black: 'black',
+    white: 'white',
+    accent: 'tomato',
+    lightGrey: '#8e9ba9',
+    border: '#e8ecf2'
+  }
+}
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+   <ThemeProvider theme = {theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );

@@ -1,29 +1,31 @@
+import { Avatar, Description, Label, Location, Quantity, StatList, Stats, Tag, Username, Wrapper } from "./user-styled"
+
 export const Profile = ({username, tag, location, avatar,stats}) => {
-    return <div class="profile">
-  <div class="description">
-    <img
+    return <Wrapper>
+  <Description>
+    <Avatar
       src={ avatar}
       alt="User avatar"
-      class="avatar"
+      
     />
-    <p class="name">{ username}</p>
-            <p class="tag">{ tag}</p>
-            <p class="location">{ location}</p>
-  </div>
+    <Username>{ username}</Username>
+            <Tag> { tag}</Tag>
+            <Location> { location}</Location>
+  </Description>
 
-  <ul class="stats">
-    <li>
-      <span class="label">Followers: </span>
-                <span class="quantity">{ stats.followers}</span>
-    </li>
-    <li>
-      <span class="label">Views: </span>
-      <span class="quantity">{ stats.views}</span>
-    </li>
-    <li>
-      <span class="label">Likes: </span>
-      <span class="quantity">{ stats.likes}</span>
-    </li>
-  </ul>
-</div>
+  <Stats>
+    <StatList>
+      <Label >Followers: </Label>
+                <Quantity >{ stats.followers}</Quantity>
+    </StatList>
+    <StatList>
+      <Label >Views: </Label>
+      <Quantity >{ stats.views}</Quantity>
+    </StatList>
+    <StatList>
+      <Label >Likes: </Label>
+      <Quantity >{ stats.likes}</Quantity>
+    </StatList>
+  </Stats>
+</Wrapper>
 }
