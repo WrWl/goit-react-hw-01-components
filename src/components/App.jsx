@@ -32,10 +32,7 @@ export const App = () => {
         <Statistic title="Upload stats" stats={data}  />
       <Statistic stats={data}  />
       <FriendList friends={friends} />
-      {/*  
-      
-      
-    <TransactionHistory items={transactions} />*/}
+      <TransactionHistory items={transactions}  />
     </div>
     
   );
